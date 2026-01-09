@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void main()
+{
+    int a[20],n,key,pos,flag=0;
+    printf("Enter number of elements in array: ");
+    scanf("%d",&n);
+    printf("Enter elements of array: ");
+    for (int i=0;i<n;i++) {
+        scanf("%d",&a[i]);
+    }
+    printf("Enter key to linear search: ");
+    scanf("%d",&key);
+    for (int i=0;i<n;i++) {
+        if (a[i]==key) {
+        pos=i;
+        flag=1;
+        }
+    }
+    if (flag==0) 
+    printf("key not found");
+    else 
+    printf ("key %d is found at index: %d\n",key,pos);
+}
